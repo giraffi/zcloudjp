@@ -1,4 +1,4 @@
 # zcloudjp-mini
 
-## Usaga
+## Usage
 
