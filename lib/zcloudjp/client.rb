@@ -8,6 +8,8 @@ module Zcloudjp
     include HTTParty
     format :json
 
+    attr_reader :base_uri, :api_key
+
     def initialize(options={})
       @api_key  = options.delete(:api_key) || ENV['ZCLOUDJP_API_KEY']
       @base_uri = options[:endpoint] || "https://my.z-cloud.jp"

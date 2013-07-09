@@ -1,0 +1,7 @@
+{
+  "metadata": {
+    "user-script": "#!/bin/bash\n\nexists() {\n  if command -v $1 &>/dev/null\n  then\n    return 0\n  else\n    return 1\n  fi\n}\n\nif ! exists /opt/local/bin/chef-client; then\n  pkgin -y install gcc47 gcc47-runtime scmgit-base scmgit-docs gmake ruby193-base ruby193-yajl ruby193-nokogiri ruby193-readline pkg-config\n\n  ## for smf cookbook\n  pkgin -y install libxslt\n\n  ## install chef\n  gem update --system\n  gem install --no-ri --no-rdoc ohai\n  gem install --no-ri --no-rdoc json\n  gem install --no-ri --no-rdoc chef --version=10.20.0\n  gem install --no-ri --no-rdoc rb-readline\nfi\n\nmkdir -p /etc/chef /var/log/chef\n",
+    "user-data": "{\"name\":\"foo\",\"email\":\"foo@examle.com\"}",
+    "user-name": "awesome"
+  }
+}

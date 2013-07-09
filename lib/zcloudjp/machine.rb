@@ -11,6 +11,7 @@ module Zcloudjp
         update_attributes(res).clone
       end
     end
+    alias :list :index
 
     # GET /machines/:id.json
     def show(params={})
@@ -18,6 +19,7 @@ module Zcloudjp
       response = Zcloudjp::Client.get("/machines/#{id}", self.request_options)
       update_attributes(response.parsed_response)
     end
+    alias :find_by :show
 
     # POST /machines.:format
     def create(params={})

@@ -1,0 +1,44 @@
+[
+  {
+    "id": "123",
+    "name": "SmartOS",
+    "type": "smartmachine",
+    "state": "running",
+    "dataset": "sdc:sdc:base64:1.8.4",
+    "memory": 1024,
+    "disk": 30720,
+    "ips": [
+      "192.168.0.1"
+    ],
+    "metadata": {},
+    "created": "2013-01-25T04:57:30+00:00",
+    "updated": "2013-02-11T03:10:10+00:00",
+    "account_id": 723,
+    "os": "SmartOS",
+    "kind": "SmartOS",
+    "package": "Small_1GB",
+    "subdomain": null,
+    "alert": true
+  },
+  {
+    "id": "456",
+    "name": null,
+    "type": "smartmachine",
+    "state": "running",
+    "dataset": "sdc:sdc:base64:1.8.4",
+    "memory": 1024,
+    "disk": 30720,
+    "ips": [
+      "192.168.0.2"
+    ],
+    "metadata": {},
+    "created": "2013-02-01T02:36:32+00:00",
+    "updated": "2013-02-12T03:40:23+00:00",
+    "account_id": 723,
+    "os": "SmartOS",
+    "kind": "SmartOS",
+    "package": "Small_1GB",
+    "subdomain": null,
+    "alert": false
+  }
+]

@@ -1,0 +1,21 @@
+{
+  "id":"1",
+  "name":"my_smart_machine",
+  "type":"smartmachine",
+  "state":"stopped",
+  "dataset":"sdc:sdc:base64:1.8.4",
+  "memory":1024,
+  "disk":30720,
+  "ips":[
+    "192.168.1.10"
+  ],
+  "metadata":{},
+  "created":"2013-01-25T04:57:30+00:00",
+  "updated":"2013-02-07T06:32:41+00:00",
+  "account_id":723,
+  "os":"SmartOS",
+  "kind":"SmartOS",
+  "package":"Small_1GB",
+  "subdomain":null,
+  "alert":true
+}

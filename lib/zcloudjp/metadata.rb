@@ -2,7 +2,7 @@
 require 'zcloudjp/utils'
 
 module Zcloudjp
-  module Metadata
+  class Metadata
     include Utils
 
     attr_reader :machine
@@ -18,12 +18,14 @@ module Zcloudjp
     def index
       Zcloudjp::Client.get("/machines/#{machine.id}/metadata", machine.request_options)
     end
+    alias :list :index
 
     # GET /machines/:id/metadata/:key.:format
     def show(params={})
       key = params.delete(:key)
       Zcloudjp::Client.get("/machines/#{machine.id}/metadata/#{key}", machine.request_options)
     end
+    alias :find_by :show
 
     # PUT /machines/:id/metadata.:format
     def create(params={})
