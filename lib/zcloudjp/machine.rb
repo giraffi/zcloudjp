@@ -21,17 +21,31 @@ module Zcloudjp
     end
     alias :find_by :show
 
-    # POST /machines.:format
+    # POST /machines.json
     def create(params={})
       self.request_options = self.request_options.merge(body: params.to_json)
       response = Zcloudjp::Client.post("/machines", self.request_options)
       update_attributes(response.parsed_response)
     end
 
-    # DELETE /machines/:id.:format
+    # DELETE /machines/:id.json
     def delete(params={})
       id = params.delete(:id) || self.id
       response = Zcloudjp::Client.delete("/machines/#{id}", self.request_options)
+      update_attributes(response.parsed_response)
+    end
+
+    # POST /machines/:id/start.json
+    def start(params={})
+      id = params.delete(:id) || self.id
+      response = Zcloudjp::Client.post("/machines/#{id}/start", self.request_options)
+      update_attributes(response.parsed_response)
+    end
+
+    # POST /machines/:id/stop.json
+    def stop(params={})
+      id = params.delete(:id) || self.id
+      response = Zcloudjp::Client.post("/machines/#{id}/stop", self.request_options)
       update_attributes(response.parsed_response)
     end
 

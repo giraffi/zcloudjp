@@ -30,7 +30,7 @@ module Zcloudjp
     # PUT /machines/:id/metadata.:format
     def create(params={})
       key = params.delete(:key)
-      machine.request_options = machine.request_options.merge(body: parse_params(params, :value).to_json)
+      machine.request_options = machine.request_options.merge(body: parse_params(params, :metadata).to_json)
       Zcloudjp::Client.put("/machines/#{machine.id}/metadata/#{key}", machine.request_options)
     end
 

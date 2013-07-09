@@ -101,4 +101,52 @@ describe Zcloudjp::Machine do
       end
     end
   end
+
+  describe "#start" do
+    before do
+      stub_post(@client.base_uri, "/machines/1/start").
+        to_return(:status => 201, :body => fixture("machine.json"), :headers => {:content_type => "application/json; charset=utf-8"})
+    end
+
+    it "returns OpenStruct with machine attributes" do
+      machine = @client.machine.start(id: '1')
+      expect(machine).to be_a OpenStruct
+    end
+
+    it "returns an id that is equal to the given id" do
+      machine = @client.machine.start(id: '1')
+      expect(machine.id).to eq '1'
+    end
+
+    it "returns true if the object is extended" do
+      machine = @client.machine.start(id: '1')
+      @machine_methods.each do |method|
+        expect(machine).to respond_to method
+      end
+    end
+  end
+
+  describe "#stop" do
+    before do
+      stub_post(@client.base_uri, "/machines/1/stop").
+        to_return(:status => 201, :body => fixture("machine.json"), :headers => {:content_type => "application/json; charset=utf-8"})
+    end
+
+    it "returns OpenStruct with machine attributes" do
+      machine = @client.machine.stop(id: '1')
+      expect(machine).to be_a OpenStruct
+    end
+
+    it "returns an id that is equal to the given id" do
+      machine = @client.machine.stop(id: '1')
+      expect(machine.id).to eq '1'
+    end
+
+    it "returns true if the object is extended" do
+      machine = @client.machine.stop(id: '1')
+      @machine_methods.each do |method|
+        expect(machine).to respond_to method
+      end
+    end
+  end
 end
