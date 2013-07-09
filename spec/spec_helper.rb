@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 unless ENV['CI']
   require 'simplecov'
   SimpleCov.start do
@@ -5,7 +7,7 @@ unless ENV['CI']
   end
 end
 
-require 'zcloud'
+require 'zcloudjp'
 require 'rspec'
 require 'multi_json'
 require 'webmock/rspec'

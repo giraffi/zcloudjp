@@ -1,6 +1,7 @@
 # encoding: utf-8
 require 'ostruct'
 require 'httparty'
+require 'active_support/core_ext'
 
 module Zcloudjp
   class Client
@@ -29,13 +30,14 @@ module Zcloudjp
     # Defines the method if not defined yet.
     def method_missing(method, *args, &block)
       self.class.class_eval do
-      attr_accessor method.to_sym
+        attr_accessor method.to_sym
 
-      # Defined a method according to the given method name
-      define_method method.to_sym do
-        obj = OpenStruct.new(request_options: @request_options)
-        obj.extend Zcloudjp.const_get(method.capitalize.to_sym)
-        instance_variable_set(:"@#{method}", obj)
+        # Defined a method according to the given method name
+        define_method method.to_sym do
+          obj = OpenStruct.new(request_options: @request_options)
+          obj.extend Zcloudjp.const_get(method.capitalize.to_sym)
+          instance_variable_set(:"@#{method}", obj)
+        end
       end
 
       # Sends to the now-defined method.

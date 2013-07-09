@@ -1,7 +1,8 @@
-# encoding: uf-8
+# encoding: utf-8
 require 'zcloudjp/version'
-require 'zcloudjp/clinet'
+require 'zcloudjp/client'
 require 'zcloudjp/machine'
+require 'zcloudjp/metadata'
 require 'Zcloudjp/utils'
 
 module Zcloudjp
