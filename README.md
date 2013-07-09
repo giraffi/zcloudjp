@@ -27,7 +27,7 @@ $ pry
 .. snip ..
 > @machine = @client.machine.create(dataset: "sdc:sdc:base64:13.1.0", package: "Small_1GB")
 => #<OpenStruct request_options={:base_uri=>"https://my.z-cloud.jp", :headers=>{"X-API-KEY"=>"abc", "Content-Type"=>"application/json; charset=utf-8", "Accept"=>"application/json", "User-Agent"=>"zcloudjp-gem/0.1.0 (x86_64-darwin11.4.2) ruby/1.9.3"}, :body=>"{\"dataset\":\"sdc:sdc:base64:13.1.0\",\"package\":\"Small_1GB\"}"}, id="9796d336-f249-440f-a440-454fab97d602", name=nil, type="smartmachine", state="provisioning", dataset="sdc:sdc:base64:13.1.0", memory=1024, disk=30720, ips=["192.168.137.196"], metadata={}, created="2013-07-09T06:08:46+00:00", updated="2013-07-09T06:08:47+00:00", account_id=723, os="SmartOS", kind="SmartOS", package="Small_1GB", subdomain=nil, alert=nil>
-> @machine = @client.machine.find_by id: '9796d336-f249-440f-a440-454fab97d602'
+> @machine.metadata.list
 => {"metadata"=> {}}
 > @machine.metadata.create(nick: 'fuubar')
 => {"metadata"=> {
