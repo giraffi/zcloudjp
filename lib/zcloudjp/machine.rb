@@ -20,6 +20,7 @@ module Zcloudjp
       update_attributes(response.parsed_response)
     end
     alias :find_by :show
+    alias :reload  :show
 
     # POST /machines.json
     def create(params={})
@@ -34,6 +35,7 @@ module Zcloudjp
       response = Zcloudjp::Client.delete("/machines/#{id}", self.request_options)
       update_attributes(response.parsed_response)
     end
+    alias :destroy :delete
 
     # POST /machines/:id/start.json
     def start(params={})
