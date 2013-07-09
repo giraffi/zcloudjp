@@ -32,7 +32,11 @@ $ pry
 > @machine.metadata.create(nick: 'fuubar')
 => {"metadata"=> {
         "nick"=>"fuubar"}}
+> @machine.state
+=> "running"
 > @machine.stop
+> @machine.reload.state
+=> "stopped"
 > @machine.delete
 ```
 
