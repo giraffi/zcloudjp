@@ -1,4 +1,4 @@
-# Zcloudjp::Mini
+# Zcloudjp
 
 TODO: Write a gem description
 
@@ -6,7 +6,7 @@ TODO: Write a gem description
 
 Add this line to your application's Gemfile:
 
-    gem 'zcloudjp-mini'
+    gem 'zcloudjp'
 
 And then execute:
 
@@ -14,7 +14,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install zcloudjp-mini
+    $ gem install zcloudjp
 
 ## Usage
 
