@@ -1,6 +1,6 @@
 # Zcloudjp
 
-TODO: Write a gem description
+A Ruby interface to the [Z Cloud](http://z-cloud.jp/) API.
 
 ## Installation
 
