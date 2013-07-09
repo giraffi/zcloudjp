@@ -35,7 +35,6 @@ $ pry
         "nick"=>"fuubar"}}
 > @machine.stop
 > @machine.delete
-
 ```
 
 ## Contributing
