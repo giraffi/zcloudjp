@@ -1,5 +1,5 @@
 # Zcloudjp
-
+[![Build Status](https://travis-ci.org/giraffi/zcloudjp.png?branch=master)](https://travis-ci.org/giraffi/zcloudjp)  
 A Ruby interface to the [Z Cloud](http://z-cloud.jp/) API.
 
 ## Installation
