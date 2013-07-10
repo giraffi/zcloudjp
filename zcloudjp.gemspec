@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.version       = Zcloudjp::VERSION
   spec.authors       = ["azukiwasher"]
   spec.email         = ["azukiwasher@higanworks.com"]
-  spec.description   = %q{A Ruby interface to the Z Cloud API}
+  spec.description   = %q{A Ruby interface to the Z Cloud API.}
   spec.summary       = %q{A Ruby interface to the Z Cloud API.}
   spec.homepage      = "https://github.com/giraffi/zcloudjp"
   spec.license       = "MIT"
