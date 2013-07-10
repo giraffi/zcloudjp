@@ -3,7 +3,7 @@ require 'zcloudjp/version'
 require 'zcloudjp/client'
 require 'zcloudjp/machine'
 require 'zcloudjp/metadata'
-require 'Zcloudjp/utils'
+require 'zcloudjp/utils'
 
 module Zcloudjp
   USER_AGENT = "zcloudjp-gem/#{Zcloudjp::VERSION} (#{RUBY_PLATFORM}) ruby/#{RUBY_VERSION}"
@@ -23,4 +23,3 @@ module Zcloudjp
     end
   end
 end
-
